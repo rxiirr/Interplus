@@ -29,8 +29,8 @@ const App: React.FC = () => {
       case Page.ABOUT:
         return <AboutPage onPageChange={setCurrentPage} />; 
       
-      case Page.BLOG:
-        return <HomePage onPageChange={setCurrentPage} />;
+   case Page.BLOG:
+  return <BlogPage onPageChange={setCurrentPage} />;
       case Page.CONTACT:
         return <HomePage onPageChange={setCurrentPage} />;
       default:
