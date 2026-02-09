@@ -102,7 +102,7 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
               </button>
             </div>
             <div className="md:w-1/2 w-full h-64 md:h-80 bg-slate-200 rounded-[2rem] overflow-hidden">
-               <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80" alt="Blog" className="w-full h-full object-cover opacity-80" />
+               <img src="hhttps://images.unsplash.com/photo-1580894732930-0babd100d356?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
             </div>
           </div>
         </div>
