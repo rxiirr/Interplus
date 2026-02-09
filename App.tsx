@@ -1,3 +1,4 @@
+import BlogPage from './pages/BlogPage';
 import React, { useState, useEffect } from 'react';
 import { Page } from './types';
 import Navbar from './components/Navbar';
@@ -23,6 +24,8 @@ const App: React.FC = () => {
         return <ServicesPage onPageChange={setCurrentPage} />;
       
       // --- PÄIVITETTY: Nyt ABOUT-reitti näyttää AboutPage-komponentin ---
+        case Page.BLOG:
+  return <BlogPage onPageChange={setCurrentPage} />;
       case Page.ABOUT:
         return <AboutPage onPageChange={setCurrentPage} />; 
       
