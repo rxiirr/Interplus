@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 // --- LISÄTTY: Tuodaan uusi sivu ---
-import AboutPage from './pages/AboutPage'; 
+import BlogPage from './pages/BlogPage';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.HOME);
