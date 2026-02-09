@@ -1,15 +1,16 @@
-
 import React, { useState, useEffect } from 'react';
 import { Page } from './types';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
+// --- LISÄTTY: Tuodaan uusi sivu ---
+import AboutPage from './pages/AboutPage'; 
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.HOME);
 
-  // Simple scroll to top on page change
+  // Skrollaa sivun yläreunaan kun sivu vaihtuu
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPage]);
@@ -20,9 +21,11 @@ const App: React.FC = () => {
         return <HomePage onPageChange={setCurrentPage} />;
       case Page.SERVICES:
         return <ServicesPage onPageChange={setCurrentPage} />;
-      // For demo purposes, other pages lead to Home or Services
+      
+      // --- PÄIVITETTY: Nyt ABOUT-reitti näyttää AboutPage-komponentin ---
       case Page.ABOUT:
-        return <HomePage onPageChange={setCurrentPage} />; 
+        return <AboutPage onPageChange={setCurrentPage} />; 
+      
       case Page.BLOG:
         return <HomePage onPageChange={setCurrentPage} />;
       case Page.CONTACT:
@@ -34,7 +37,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col font-display selection:bg-primary/20">
-      {/* Background Blobs for specific pages */}
+      {/* Taustapallot (näkyvät vain Services-sivulla) */}
       {currentPage === Page.SERVICES && (
         <>
           <div className="blob-bg bg-accent-warm w-[600px] h-[600px] -top-64 -left-48"></div>
