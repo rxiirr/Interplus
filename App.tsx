@@ -1,11 +1,10 @@
-import BlogPage from './pages/BlogPage';
 import React, { useState, useEffect } from 'react';
 import { Page } from './types';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
-// --- LISÄTTY: Tuodaan uusi sivu ---
+import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
 
 const App: React.FC = () => {
@@ -22,15 +21,10 @@ const App: React.FC = () => {
         return <HomePage onPageChange={setCurrentPage} />;
       case Page.SERVICES:
         return <ServicesPage onPageChange={setCurrentPage} />;
-      
-      // --- PÄIVITETTY: Nyt ABOUT-reitti näyttää AboutPage-komponentin ---
-        case Page.BLOG:
-  return <BlogPage onPageChange={setCurrentPage} />;
       case Page.ABOUT:
-        return <AboutPage onPageChange={setCurrentPage} />; 
-      
-   case Page.BLOG:
-  return <BlogPage onPageChange={setCurrentPage} />;
+        return <AboutPage onPageChange={setCurrentPage} />;
+      case Page.BLOG:
+        return <BlogPage onPageChange={setCurrentPage} />;
       case Page.CONTACT:
         return <HomePage onPageChange={setCurrentPage} />;
       default:
